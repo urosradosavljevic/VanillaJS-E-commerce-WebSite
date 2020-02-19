@@ -1,0 +1,172 @@
+
+// CUSTOM PRODUCT RADIO BUTTONS
+
+[class*="-radio"] > input{
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+[class*="-radio"]{
+    margin: 0 4px 4px 0;
+}
+
+@mixin radioCustom($color){    
+    padding: 7px 15px 7px 15px;
+    border-radius: 6px;
+    border: solid 1px $color;
+    color: $color;   
+    cursor: pointer;
+}
+
+@mixin radioHover ($color) {    
+    background-color: $color;
+    border: solid 1px $color;
+    color: white;
+}
+
+@mixin radioChecked ($color) {    
+    background-color: $color;
+    border: solid 1px $color;
+    color: white;
+}
+
+.size-radio > label{
+    @include radioCustom($blackLabel);
+}
+
+.size-radio > input:hover ~ label{
+    @include radioHover($blackLabel);
+}
+
+.size-radio > input:checked ~ label{
+    @include radioChecked($blackLabel);
+}
+
+
+// radio button specific colors classes 
+
+.black-radio > label{
+    @include radioCustom($blackLabel);
+}
+
+.black-radio > input:checked ~ label{
+    @include radioChecked($blackLabel);
+}
+
+.black-radio > input:hover ~ label{
+    @include radioHover($blackLabel);
+}
+
+
+.white-radio > label{
+    @include radioCustom($whiteLabel);
+    color: black;
+    border-color: black;
+}
+
+.white-radio > input:checked ~ label{
+    @include radioChecked($whiteLabel);
+    color: black;
+}
+
+.white-radio > input:hover ~ label{
+    @include radioHover($whiteLabel);
+    color: black;
+}
+
+
+
+.brown-radio > label{
+    @include radioCustom($brownLabel);
+}
+
+.brown-radio > input:checked ~ label{
+    @include radioChecked($brownLabel);
+}
+
+.brown-radio > input:hover ~ label{
+    @include radioHover($brownLabel);
+}
+
+
+.gray-radio > label{
+    @include radioCustom($grayLabel);
+}
+
+.gray-radio > input:checked ~ label{
+    @include radioChecked($grayLabel);
+}
+
+.gray-radio > input:hover ~ label{
+    @include radioHover($grayLabel);
+}
+
+
+
+.blue-radio > label{
+    @include radioCustom($blueLabel);
+}
+
+.blue-radio > input:checked ~ label{
+    @include radioChecked($blueLabel);
+}
+
+.blue-radio > input:hover ~ label{
+    @include radioHover($blueLabel);
+}
+
+
+.red-radio > label{
+    @include radioCustom($redLabel);
+}
+
+.red-radio > input:checked ~ label{
+    @include radioChecked($redLabel);
+}
+
+.red-radio > input:hover ~ label{
+    @include radioHover($redLabel);
+}
+
+
+
+.green-radio > label{
+    @include radioCustom($greenLabel);
+}
+
+.green-radio > input:checked ~ label{
+    @include radioChecked($greenLabel);
+}
+
+.green-radio > input:hover ~ label{
+    @include radioHover($greenLabel);
+}
+
+
+
+.navy-radio > label{
+    @include radioCustom($navyLabel);
+}
+
+.navy-radio > input:checked ~ label{
+    @include radioChecked($navyLabel);
+}
+
+.navy-radio > input:hover ~ label{
+    @include radioHover($navyLabel);
+}
+
+
+
+.ochre-radio > label{
+    @include radioCustom($ochreLabel);
+}
+
+.ochre-radio > input:checked ~ label{
+    @include radioChecked($ochreLabel);
+}
+
+.ochre-radio > input:hover ~ label{
+    @include radioHover($ochreLabel);
+}

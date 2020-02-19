@@ -1,0 +1,49 @@
+// CUSTOM CHECKBOX
+
+[class*="-checkbox"] > input{
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+[class*="-checkbox"] > label{
+    font-size: 10pt;
+    margin: 0!important;
+    text-align: center;
+}
+
+.custom-button-checkbox{
+    margin: 0 4px 4px 0;
+}
+
+@mixin checkboxCustom($color){    
+    padding: 8px;
+    border-radius: 6px;
+    border: solid 1px $color;
+    color: $color;   
+    cursor: pointer;
+}
+
+@mixin labelHover ($color) {    
+    background-color: $color;
+    border: solid 1px $color;
+    color: white;
+}
+
+@mixin labelChecked ($color) {    
+    background-color: $color;
+    border: solid 1px $color;
+    color: white;
+}
+
+.custom-button-checkbox > label{
+    @include checkboxCustom($blackLabel);
+}
+
+.custom-button-checkbox > input:hover ~ label{
+    @include labelHover($blackLabel);
+}
+
+.custom-button-checkbox > input:checked ~ label{
+    @include labelChecked($blackLabel);
+}

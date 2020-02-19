@@ -1,0 +1,40 @@
+// GENDER CHECKBOX
+
+.gender-checkbox{
+    width: calc(33% - 6px);
+    margin: 0 4px 4px 0;
+}
+
+@mixin checkboxCustom($color){    
+    line-height: 2;
+    padding: 3px;
+    width: 100%;
+    color: $color;   
+    border: solid 1px black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@mixin labelHover ($color) {    
+    background-color: $color;
+    border: solid 1px $color;
+    color: white;
+}
+
+@mixin labelChecked ($color) {    
+    background-color: $color;
+    border: solid 1px $color;
+    color: white;
+}
+
+.gender-checkbox > label {
+    @include checkboxCustom($blackLabel);
+}
+
+.gender-checkbox > input:hover ~ label {
+    @include labelHover($blackLabel);
+}
+
+.gender-checkbox > input:checked ~ label{
+    @include labelChecked($blackLabel);
+}

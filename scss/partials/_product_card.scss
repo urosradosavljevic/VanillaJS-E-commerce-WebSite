@@ -1,0 +1,14 @@
+
+// Product Card
+.card-header{
+    position: relative;
+    overflow: hidden;
+    padding: 0!important;
+}
+
+  article.card:hover .btn-choose-options{
+    top: 80%;
+    left: calc(50% - 20px);
+    opacity: 1;
+  }
+    

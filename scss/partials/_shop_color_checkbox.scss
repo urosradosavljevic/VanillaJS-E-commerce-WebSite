@@ -1,0 +1,168 @@
+// CUSTOM SHOP CHECKBOXES
+
+[class*="-color-checkbox"]{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 33%;
+    margin-bottom: 10px;
+}
+
+
+// Checkboxes button mixins
+
+@mixin checkboxCustom($color){    
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 0 auto 3px auto;
+    background-color: $color;
+    content: '';
+}
+
+@mixin checkboxChecked(){
+    display: block;
+    height: 6px;
+    width: 13px;
+    position: absolute;
+    top: 11px;
+    left: calc(50% - 6px);
+    border: solid white;
+    border-width: 0 0 2px 2px ;
+    transform: rotate(-45deg);
+    content: '';
+}
+
+@mixin checkboxHover(){
+    color: darkgray;
+    cursor: pointer;
+}
+
+
+
+// checkbox button specific colors classes 
+
+
+.black-color-checkbox > label::before{
+    @include checkboxCustom($blackLabel);
+}
+
+.black-color-checkbox > input:checked ~ label::after{
+    @include checkboxChecked();
+}
+
+.black-color-checkbox > input:hover ~ label{
+    @include checkboxHover();
+}
+
+
+.white-color-checkbox > label::before{
+    @include checkboxCustom($whiteLabel);
+}
+
+.white-color-checkbox > input:checked ~ label::after{
+    @include checkboxChecked();
+    border-color: black;
+}
+
+.white-color-checkbox > input:hover ~ label{
+    @include checkboxHover();
+}
+
+
+
+.brown-color-checkbox > label::before{
+    @include checkboxCustom($brownLabel);
+}
+
+.brown-color-checkbox > input:checked ~ label::after{
+    @include checkboxChecked();
+}
+
+.brown-color-checkbox > input:hover ~ label{
+    @include checkboxHover();
+}
+
+
+.gray-color-checkbox > label::before{
+    @include checkboxCustom($grayLabel);
+}
+
+.gray-color-checkbox > input:checked ~ label::after{
+    @include checkboxChecked();
+}
+
+.gray-color-checkbox > input:hover ~ label{
+    @include checkboxHover();
+}
+
+
+
+.blue-color-checkbox > label::before{
+    @include checkboxCustom($blueLabel);
+}
+
+.blue-color-checkbox > input:checked ~ label::after{
+    @include checkboxChecked();
+}
+
+.blue-color-checkbox > input:hover ~ label{
+    @include checkboxHover();
+}
+
+
+.red-color-checkbox > label::before{
+    @include checkboxCustom($redLabel);
+}
+
+.red-color-checkbox > input:checked ~ label::after{
+    @include checkboxChecked();
+}
+
+.red-color-checkbox > input:hover ~ label{
+    @include checkboxHover();
+}
+
+
+
+.green-color-checkbox > label::before{
+    @include checkboxCustom($greenLabel);
+}
+
+.green-color-checkbox > input:checked ~ label::after{
+    @include checkboxChecked();
+}
+
+.green-color-checkbox > input:hover ~ label{
+    @include checkboxHover();
+}
+
+
+
+.navy-color-checkbox > label::before{
+    @include checkboxCustom($navyLabel);
+}
+
+.navy-color-checkbox > input:checked ~ label::after{
+    @include checkboxChecked();
+}
+
+.navy-color-checkbox > input:hover ~ label{
+    @include checkboxHover();
+}
+
+
+
+.ochre-color-checkbox > label::before{
+    @include checkboxCustom($ochreLabel);
+}
+
+.ochre-color-checkbox > input:checked ~ label::after{
+    @include checkboxChecked();
+}
+
+.ochre-color-checkbox > input:hover ~ label{
+    @include checkboxHover();
+}
